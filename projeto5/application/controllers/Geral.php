@@ -3,21 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Geral extends CI_Controller {
 
-	public function index(){
+	public function index(){		
 		$this->load->view('layout/cabecalho');
-		$this->load->view('pagina1');
 		$this->load->view('layout/rodape');
 	}
 
-	public function pag02(){
+	public function pag02($nome, $idade){
+		echo $nome . '-' . $idade;
+
 		$this->load->view('layout/cabecalho');
-		$this->load->view('pagina2');
 		$this->load->view('layout/rodape');
 	}
 
-	public function pag03(){
+	public function pag03($nome){
+		echo $nome;
+
 		$this->load->view('layout/cabecalho');
-		$this->load->view('pagina3');
 		$this->load->view('layout/rodape');
 	} 
 }
